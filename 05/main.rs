@@ -1,5 +1,3 @@
-use itertools::Itertools;
-
 type Stack = Vec<Vec<char>>;
 type Move = (usize, usize, usize);
 type Input = (Stack, Vec<Move>);
@@ -42,7 +40,11 @@ fn move_stacks(stack: &mut Stack, moves: &[Move], version: u16) {
 }
 
 fn get_top_row(stack: &Stack) -> String {
-    stack.iter().filter_map(|m| m.last()).join("")
+    let mut res = String::new();
+    for ch in stack.iter().filter_map(|m| m.last()) {
+        res.push(*ch);
+    }
+    res
 }
 
 fn part1(input: Input) -> String {
