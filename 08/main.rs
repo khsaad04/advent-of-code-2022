@@ -1,12 +1,11 @@
+#![allow(unused)]
+
 fn part1(input: &str) -> String {
-    let edge = &input.lines().count() * 2 + input.lines().last().unwrap().len() - 4;
-    let result = edge;
-    result.to_string()
+    todo!();
 }
 
 fn part2(input: &str) -> String {
-    let result = 0;
-    result.to_string()
+    todo!();
 }
 
 fn main() -> Result<(), std::io::Error> {
